@@ -11,16 +11,15 @@ export class SaludComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
-  hospitalForm = this.fb.group({
-		nombrehosp: [" ",Validators.required ],
-		direccion: this.fb.group({
-			callehosp: [ '' ],
-			numerohosp: [ '' ]
-		}),
-	});
+  
 
   pacienteForm = this.fb.group({
-		nombre: [ '', Validators.required ],
+
+    nombrehosp: [" ",Validators.required ],
+    callehosp: [ '' ],
+		numerohosp: [ '' ],
+		
+    nombre: [ '', Validators.required ],
 		apellido: [ '' ],
 		edad: [ '' ],
 		direccion: this.fb.group({
