@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tp3"
+    }
+  },
+  "defaultProject": "tp3",
+  "cli": {
+    "analytics": false
+  }
 }
