@@ -8,6 +8,14 @@ import {Paciente} from 'src/app/formulario/data-binding/clases/Paciente';
 })
 export class PacienteComponent implements OnInit {
   nombrePaciente: string;
+  apellido: string = 'Ortigoza';
+
+
+  imagenPaciente: string = 'https://www.ceroacero.es/img/jogadores/57/407857_ori__20170531082849_nestor_ortigoza.jpg';
+  anchoImg= '250';
+  altoImg= '350';
+  tooltip= 'Orti';
+
 
   paciente: Paciente = {
     nombre: 'Nestor',
@@ -24,8 +32,14 @@ export class PacienteComponent implements OnInit {
 
 
   constructor() {
-    this.nombrePaciente= 'Maxi Ranquileo'
-   }
+    this.nombrePaciente= 'Nestor Ortigoza';
+  }
+
+
+  verPaciente(paciente : any) {
+		alert('Paciente: ' + paciente);
+	}
+
 
   ngOnInit(): void {
   }

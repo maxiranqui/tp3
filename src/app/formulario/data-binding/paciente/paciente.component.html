@@ -4,3 +4,20 @@
 <p>Nombre Interpolado: {{nombrePaciente}}</p>
 <p>Edad Interpolada: {{paciente.edad}}</p>
 
+
+<div>
+    <h4>Property Binding</h4>
+    <img [src]="imagenPaciente" [title]="tooltip" [width]="anchoImg" [height]="altoImg">
+</div>
+
+
+<div>
+    <h4>Event Binding</h4>
+    <button (click)="verPaciente(nombrePaciente)">Ver Nombre de Paciente</button>
+</div>
+
+<div>
+    <h4>Two way Data Binding</h4>
+    <input [(ngModel)]="apellido">
+    <p>{{apellido | uppercase}} </p>
+</div>
