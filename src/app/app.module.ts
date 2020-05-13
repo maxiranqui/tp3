@@ -7,6 +7,7 @@ import { SaludComponent } from './formulario/salud/salud.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PacienteComponent } from './formulario/data-binding/paciente/paciente.component';
 import { HospitalComponent } from './formulario/data-binding/hospital/hospital.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HospitalComponent } from './formulario/data-binding/hospital/hospital.c
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
