@@ -1,1 +1,3 @@
-<p>hospital works!</p>
+
+<p>Nuevo hospital mas cercano: {{otroHospitalPadre}}</p>
+<app-paciente [hospitalHijo]="hospitalPadre" (hospitalHijoEvento)="onCambioHospital($event)"></app-paciente>

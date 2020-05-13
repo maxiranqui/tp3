@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 import {Paciente} from 'src/app/formulario/data-binding/clases/Paciente';
 
 @Component({
@@ -7,6 +7,9 @@ import {Paciente} from 'src/app/formulario/data-binding/clases/Paciente';
   styleUrls: ['./paciente.component.css']
 })
 export class PacienteComponent implements OnInit {
+  @Input() hospitalHijo: string;
+  @Output() hospitalHijoEvento = new EventEmitter<string>();
+  
   nombrePaciente: string;
   apellido: string = 'Ortigoza';
 
@@ -42,6 +45,9 @@ export class PacienteComponent implements OnInit {
 
 
   ngOnInit(): void {
+  }
+  cambioHospital(){
+    this.hospitalHijoEvento.emit('Hospital Castro Rendón');
   }
 
 }
