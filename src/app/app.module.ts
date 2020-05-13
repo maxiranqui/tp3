@@ -8,6 +8,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PacienteComponent } from './formulario/data-binding/paciente/paciente.component';
 import { HospitalComponent } from './formulario/data-binding/hospital/hospital.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

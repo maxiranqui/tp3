@@ -4,50 +4,62 @@
 
     <h3>Datos de Hospital</h3>
     <div class="hospitalPaciente">
-        <label>Hospital
-            <input type="text" formControlName="nombrehosp">
-        </label>
-         <label>Calle
-            <input type="text" formControlName="callehosp">
-        </label>
-        <label>N°
-            <input type="text" formControlName="numerohosp">
-        </label>
+        
+        <mat-form-field>
+            <input type="text" matInput formControlName="nombrehosp" placeholder=" Nombre del Hospital ">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input type="text" matInput formControlName="callehosp" placeholder=" Calle ">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input type="text" matInput formControlName="numerohosp" placeholder=" Número ">
+        </mat-form-field>
+
     </div>
 
-    <h3>Datos de Paciente</h3>
+    <h3>Datos del Paciente</h3>
 
     <div class="datosPaciente">
-        <label>Nombre
-            <input type="text" formControlName="nombre">
-        </label>
-        <label>Apellido
-            <input type="text" formControlName="apellido">
-        </label>
-        <label>Edad
-            <input type="text" formControlName="edad">
-        </label>
+
+        <mat-form-field>
+            <input type="text" matInput formControlName="nombre" placeholder=" Nombre de paciente ">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input type="text" matInput formControlName="apellido" placeholder=" Apellido ">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input type="text" matInput formControlName="edad" placeholder=" Edad ">
+        </mat-form-field>&nbsp;
+
     </div>
 
     <div formGroupName="direccion" class="direccion">
         <p>Dirección</p>
-        <label>Calle
-            <input type="text" formControlName="calle">
-        </label>
-        <label>N°
-            <input type="text" formControlName="numero">
-        </label>
+        <mat-form-field>
+            <input type="text" matInput formControlName="calle" placeholder=" Calle ">
+        </mat-form-field>&nbsp;
+        <mat-form-field>
+            <input type="text" matInput formControlName="numero" placeholder=" Numero ">
+        </mat-form-field>&nbsp;
+
     </div>
 
     <div formArrayName="telefonos">
         <p>Teléfonos</p>
         <div *ngFor="let telefono of telefonos.controls; let i = index" class="telefono">
-            <label>
-                Teléfono <input type="text" [formControlName]="i">
-            </label>
+           
+            <mat-form-field>
+                <input type="text" matInput formControlName="i" placeholder=" Número de Teléfono ">
+            </mat-form-field>&nbsp;
+           
         </div>
-        <button (click)="agregarTelefono()">Agregar Teléfono</button>
+        <button mat-raised-button (click)="agregarTelefono()">Agregar Teléfono</button>
     </div>
+    <p>
 
-    <button type="submit">Guardar</button>
+    </p>
+
+     <button mat-raised-button type="submit">Guardar</button>
+
+
 </form>

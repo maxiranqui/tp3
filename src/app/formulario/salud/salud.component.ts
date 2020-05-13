@@ -8,6 +8,7 @@ import { FormControl, FormGroup, FormBuilder, Validator, Validators, FormArray }
   styleUrls: ['./salud.component.css']
 })
 export class SaludComponent implements OnInit {
+	nombrePrueba:string;
 
   constructor(private fb: FormBuilder) { }
 
@@ -41,11 +42,11 @@ export class SaludComponent implements OnInit {
 		this.pacienteForm.value();
 
 		this.pacienteForm.setValue({
-			nombre: 'Diego',
-			apellido: 'Maradona',
-			edad: 59,
+			nombre: 'Maxi',
+			apellido: 'Ranquileo',
+			edad: 30,
 			direccion: {
-				calle: 'Perez'
+				calle: 'Godoy'
 			},
 			telefonos: [ '' ]
 		});
